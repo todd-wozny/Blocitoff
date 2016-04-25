@@ -21,6 +21,8 @@ source 'https://rubygems.org'
  gem 'bootstrap-sass'
  
  gem 'devise'
+ 
+ gem 'faker'
 
  gem 'sass-rails', '~> 5.0'
  
