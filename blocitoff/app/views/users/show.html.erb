@@ -8,4 +8,25 @@
   <%= @user.last_sign_in_at %>
 </p>
 
+<h2>Items</h2>
+<% @user.items.each do |item| %>
+  <p>
+    <strong>Name:</strong>
+    <%= item.name %>
+  </p>
+ 
+<% end %>
+
+<h2>Add an Item:</h2>
+<%= form_for([@user, @user.items.build]) do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
 <%= link_to 'Back', users_path %>
