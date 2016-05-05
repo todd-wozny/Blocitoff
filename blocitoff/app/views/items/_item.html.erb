@@ -1,12 +1,7 @@
 
 
-<p>
+<li id='<%="item-#{item.id}" %>'>
   <strong>Name:</strong>
   <%= item.name %>
-</p>
-
-<p>
- 
-</p>
-
- <%= link_to "Delete", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+  <%= link_to "Delete", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+</li>
