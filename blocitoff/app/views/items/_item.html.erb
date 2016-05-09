@@ -3,5 +3,7 @@
 <li id='<%="item-#{item.id}" %>'>
   <strong>Name:</strong>
   <%= item.name %>
+  <strong>Time left:</strong>
+  <%= distance_of_time_in_words(Time.now, item.created_at + 7.days) %>
   <%= link_to "Delete", [item.user, item], method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
 </li>
